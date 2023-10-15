@@ -59,9 +59,9 @@ static const int screenHeight = 450;
 static bool gameOver = false;
 static bool pause = false;
 
-static Player player = { 0 };
-static Ball ball = { 0 };
-static Brick brick[LINES_OF_BRICKS][BRICKS_PER_LINE] = { 0 };
+static Player player = { {0} };
+static Ball ball = { {0} };
+static Brick brick[LINES_OF_BRICKS][BRICKS_PER_LINE] = { { { { 0 } } } };
 static Vector2 brickSize = { 0 };
 
 //------------------------------------------------------------------------------------

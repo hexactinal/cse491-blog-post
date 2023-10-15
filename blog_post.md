@@ -91,10 +91,45 @@ How to test the Arkanoid example:
 <!-- Will probably have to make the Arkanoid example a cpp file instead of a c file. -->
 
 ### Experience getting functions and classes working
-1. Add experience
+As stated above, I did have to change the `brickSize` initialization in order
+to compile `arkanoid.cpp` correctly. I did not have to change any other code for
+the functionality to work, but there were also a few compiler warnings: <br />
+    ```
+    arkanoid.cpp:62:26: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+   62 | static Player player = { 0 };
+      |                          ^
+      |                          {}
+    arkanoid.cpp:63:22: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+    63 | static Ball ball = { 0 };
+        |                      ^
+        |                      {}
+    arkanoid.cpp:64:58: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+    64 | static Brick brick[LINES_OF_BRICKS][BRICKS_PER_LINE] = { 0 };
+        |                                                          ^
+        |                                                          {}
+    arkanoid.cpp:64:58: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+    64 | static Brick brick[LINES_OF_BRICKS][BRICKS_PER_LINE] = { 0 };
+        |                                                          ^
+        |                                                          {}
+    arkanoid.cpp:64:58: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+    64 | static Brick brick[LINES_OF_BRICKS][BRICKS_PER_LINE] = { 0 };
+        |                                                          ^
+        |                                                          {}
+    ```
+
+To get rid of these compiler warnings, I changed lines 62-64 of `arkanoid.cpp`
+to include curly braces around the initializations: <br />
+    ```cpp
+    static Player player = { {0} };
+    static Ball ball = { {0} };
+    static Brick brick[LINES_OF_BRICKS][BRICKS_PER_LINE] = { { { { 0 } } } };
+    ```
 
 ### Difficulty of integration and making changes
-1. Add difficulty
+I think that Raylib should be relatively easy to integrate and make changes with.
+Its website mentions instructions for compiling on the command line,
+with Makefiles, and with CMake. Therefore, I could see Raylib being introduced into
+many different types of applications and many types of build systems.
 
 ### When I would recommend using Raylib
 1. add when I would recommend
