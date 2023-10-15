@@ -132,10 +132,13 @@ with Makefiles, and with CMake. Therefore, I could see Raylib being introduced i
 many different types of applications and many types of build systems.
 
 ### When I would recommend using Raylib
-1. add when I would recommend
+The most obvious use case for using Raylib would be someone
+who knows how to use C or C++ and wants to develop a video game with a simple game engine.
+I could see this being ideal for a game jam, where a game would need to be
+quickly developed and iterated upon, and developers are typically encouraged
+to make their games able to run in a web browser.
+Since Raylib can be compiled with Emscripten, it can be run in any web browser that
+supports WebAssembly, which includes all modern browsers.
 
 ### Tips for new Raylib users
 1. add tips
-
-### Conclusion
-add conclusion
