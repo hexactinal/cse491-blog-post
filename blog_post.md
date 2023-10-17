@@ -141,4 +141,8 @@ Since Raylib can be compiled with Emscripten, it can be run in any web browser t
 supports WebAssembly, which includes all modern browsers.
 
 ### Tips for new Raylib users
-1. add tips
+The biggest tip I would give to new Raylib users would be to plan your build system
+ahead of time. I tried to start this blog post by following many different tutorials,
+and none of them gave me the exact instructions to set up Raylib with Emscripten
+specifically. Raylib supports many different platforms, but as shown from my experience,
+it's challenging to get it working perfectly the first time.
